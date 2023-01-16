@@ -7,9 +7,10 @@ const jwt=require('jsonwebtoken');
 const dotenv=require('dotenv');
 dotenv.config({path:'./config.env'});
 
-
+const cors = require("cors");
 require('./db/conn.js');
 
+app.use(cors());
 app.use(express.json());
 app.use(require('./router/auth'));
 app.use('/companyApi', require('./router/companyStockApi'))

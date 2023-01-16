@@ -1,45 +1,45 @@
-const mongoose = require('mongoose')
-mongoose.set('strictQuery', false)
-const Schema = mongoose.Schema
-var objectId = Schema.objectId
-const stockSchema = new Schema({
-    Date : {
-        type: Date, required: true
-        
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+const Schema = mongoose.Schema;
+var objectId = Schema.objectId;
+const stockSchema = new Schema(
+  {
+    Date: {
+      type: Date,
+      required: true,
     },
-    Open : {
-        type:mongoose.Types.Decimal128,
+    Open: {
+      type: Number,
 
-       required : true
+      required: true,
     },
-    Close : {
-        type:mongoose.Types.Decimal128,
+    Close: {
+      type: Number,
 
-       required : true
+      required: true,
     },
-    Low : {
-        type:mongoose.Types.Decimal128,
-        required : true
+    Low: {
+      type: Number,
+      required: true,
     },
-    High : {
-        type:mongoose.Types.Decimal128,
-       
-        required : true
+    High: {
+      type: Number,
+
+      required: true,
     },
-    AdjClose : {
-        type:mongoose.Types.Decimal128,
+    AdjClose: {
+      type: Number,
 
-       required : true
+      required: true,
     },
-    Volume : {
-        type: Number,
+    Volume: {
+      type: Number,
 
-        required: true
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
 
-    }
-
-
-}, { timestamps: true })
-
-const ashokley = mongoose.model('ASHOKLEY', stockSchema)
-module.exports = ashokley
+const ashokley = mongoose.model("ASHOKLEY", stockSchema);
+module.exports = ashokley;

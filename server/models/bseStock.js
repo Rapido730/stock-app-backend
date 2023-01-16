@@ -8,26 +8,26 @@ const stockSchema = new Schema({
         
     },
     Open : {
-        type:mongoose.Types.Decimal128,
+        type:Number,
 
        required : true
     },
     Close : {
-        type:mongoose.Types.Decimal128,
+        type:Number,
 
        required : true
     },
     Low : {
-        type:mongoose.Types.Decimal128,
+        type:Number,
         required : true
     },
     High : {
-        type:mongoose.Types.Decimal128,
+        type:Number,
        
         required : true
     },
     AdjClose : {
-        type:mongoose.Types.Decimal128,
+        type:Number,
 
        required : true
     },
