@@ -4,8 +4,8 @@ const app = express();
 const PORT =  process.env.PORT || 3000;
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const dotenv = require("dotenv");
-dotenv.config({ path: "./config.env" });
+// const dotenv = require("dotenv");
+// dotenv.config({ path: "./config.env" });
 
 const cors = require("cors");
 require("./db/conn.js");
