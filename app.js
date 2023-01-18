@@ -1,11 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PORT =  process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-// const dotenv = require("dotenv");
-// dotenv.config({ path: "./config.env" });
 
 const cors = require("cors");
 require("./db/conn.js");
@@ -18,7 +16,7 @@ app.use("/sensexApi", require("./router/nseOrBseApi"));
 const User = require("./models/userinfo.js");
 
 app.listen(PORT, () => {
-  console.log("successfully connected");
+  console.log("successfully connected ",PORT);
 });
 
 // app.post('/register',async(req,res)=>{
